@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--配置controller扫描-->
+    <context:component-scan base-package="cn.cwx521.controller"/>
+
+    <!--注解驱动-->
+    <mvc:annotation-driven/>
+    <!--视图解释器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!-- 前缀 -->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!-- 后缀 -->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+
+    <!--配置资源映射 不是必须，如果你把js等放到web-inf下面就要用到-->
+    <mvc:resources location="/WEB-INF/js/" mapping="/js/**"/>
+    <mvc:resources location="/WEB-INF/css/" mapping="/css/**"/>
+    <mvc:resources mapping="/img/**" location="/WEB-INF/img/"/>
+    <mvc:resources mapping="/fonts/**" location="/WEB-INF/fonts/"/>
+
+    <!--&lt;!&ndash; 定义文件上传解析器  上传文件或用到&ndash;&gt;-->
+    <!--<bean id="multipartResolver"-->
+    <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+    <!--&lt;!&ndash; 设定默认编码 &ndash;&gt;-->
+    <!--<property name="defaultEncoding" value="UTF-8"></property>-->
+    <!--&lt;!&ndash; 设定文件上传的最大值5MB，5*1024*1024 &ndash;&gt;-->
+    <!--<property name="maxUploadSize" value="5242880"></property>-->
+    <!--</bean>-->
+
+</beans>

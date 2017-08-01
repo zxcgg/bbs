@@ -1,0 +1,19 @@
+.myinput {
+	font-size: 12px;
+	border: 1px solid #d4d4d4;
+	margin: 0;
+	padding: 4px;
+	white-space: normal;
+	vertical-align: top;
+	outline-style: none;
+	resize: none;
+	width: 190px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.myinput:focus {
+	border-color: #bbb;
+	box-shadow: 0 0 3px 0 #d4d4d4;
+}

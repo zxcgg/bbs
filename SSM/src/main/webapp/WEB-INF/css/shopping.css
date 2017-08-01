@@ -1,0 +1,112 @@
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+
+.eleme-header {
+	position: relative;
+	z-index: 20;
+	height: 44px;
+	background: #3199e8;
+	color: #fff;
+	line-height: 44px;
+}
+
+.eleme-header .title {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 65px;
+	right: 65px;
+	overflow: hidden;
+	margin: 0;
+	text-align: center;
+	font-size: 1.75rem;
+	color: #fff;
+}
+
+.menu-cart {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 42px;
+	padding: 0 10px;
+	background: #323941;
+	line-height: 1;
+}
+
+.mcart-summary {
+	color: #fff;
+	font-size: 2.05rem;
+	height: 100%;
+	float: left;
+	line-height: 2.2;
+}
+
+.ui-quantity:after {
+	content: "份";
+}
+
+.productList {
+	height: 1400px;
+}
+
+.list {
+	height: 90px;
+	padding: 10px 8px;
+	background: #fff;
+	border-top: 1px solid #eee;
+}
+
+.listImg {
+	width: 70px;
+	height: 70px;
+	float: left;
+}
+
+.listBody {
+	padding-left: 77px;
+}
+
+.listBody p {
+	color: #333;
+	font-size: 15px;
+	line-height: 15px;
+}
+
+.listBodyFooter .price:before {
+	content: "¥";
+}
+
+.listBody .content {
+	height: 22px;
+}
+
+.listBodyFooter .price {
+	color: #ff6000;
+	font-size: 18px;
+}
+
+.listBodyFooter .control {
+	float: right;
+	height: 25px;
+	width: 25px;
+	font-size: 22px;
+	line-height: 25px;
+	color: #FFFFFF;
+	text-align: center;
+	background: #3199e8;
+	border-radius: 50%;
+}
