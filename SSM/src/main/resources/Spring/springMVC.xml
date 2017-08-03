@@ -35,5 +35,28 @@
     <!--&lt;!&ndash; 设定文件上传的最大值5MB，5*1024*1024 &ndash;&gt;-->
     <!--<property name="maxUploadSize" value="5242880"></property>-->
     <!--</bean>-->
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/login"/>
+            <mvc:exclude-mapping path="/usercenter"/>
+            <mvc:exclude-mapping path="/home"/>
+            <mvc:exclude-mapping path="/writepage"/>
+            <mvc:exclude-mapping path="/home"/>
+            <mvc:exclude-mapping path="/newpage"/>
+            <mvc:exclude-mapping path="/page/**"/>
+            <mvc:exclude-mapping path="/show"/>
+            <mvc:exclude-mapping path="/goodpage"/>
+            <mvc:exclude-mapping path="/js/*"/>
+            <mvc:exclude-mapping path="/sound/*"/>
+            <mvc:exclude-mapping path="/img/*"/>
+            <mvc:exclude-mapping path="/css/**/**"/>
+            <mvc:exclude-mapping path="/user/userlogin"/>
+            <mvc:exclude-mapping path="/webservice/*"/>
+            <bean class="cn.cwx521.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 
 </beans>
